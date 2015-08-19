@@ -1,0 +1,13 @@
+{
+  "name": "NOT-APP",
+  "version": "0.0.0",
+  "description": "twitter sentiment analysis",
+  "main": "index.js",
+  "author": "Somesh Vyas",
+  "dependencies": {
+    "socket.io": "latest",
+    "express": "latest",
+    "jade": "latest",
+    "twit": "latest"
+  }
+}
