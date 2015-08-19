@@ -8,6 +8,8 @@
     "socket.io": "latest",
     "express": "latest",
     "jade": "latest",
-    "twit": "latest"
+    "twit": "latest",
+    "angular": "latest",
+    "bootstrap": "latest"
   }
 }
