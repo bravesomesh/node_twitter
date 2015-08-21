@@ -10,6 +10,8 @@
     "jade": "latest",
     "twit": "latest",
     "angular": "latest",
-    "bootstrap": "latest"
+    "bootstrap": "latest",
+    "winston": "latest",
+    "morgan": "latest"
   }
 }

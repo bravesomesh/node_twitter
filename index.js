@@ -13,7 +13,12 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/node_modules'));
 
 app.get("/", function(req, res){
-    res.render("page");
+    //res.render("page");
+    res.sendFile('page.html');
 });
 
 var twitter = require('./config/twitter');
+// var logger = require('./config/logger');
+
+// logger.debug("Overriding 'Express' logger");
+// app.use(require('morgan'));

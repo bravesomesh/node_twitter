@@ -19,9 +19,6 @@ window.onload = function() {
             console.log("There is a problem:", data);
         }
     });
-    socket.on('funny', function (data) {
-        console.log(data);
-    });
  
     sendButton.onclick = sendMessage = function() {
         if(name.value == "") {
