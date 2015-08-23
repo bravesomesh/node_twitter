@@ -8,6 +8,7 @@
     "socket.io": "latest",
     "express": "latest",
     "jade": "latest",
+    "ejs": "latest",
     "twit": "latest",
     "angular": "latest",
     "bootstrap": "latest",
