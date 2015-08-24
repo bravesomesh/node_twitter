@@ -1,8 +1,4 @@
-(function () {
-  'use strict';
-
-  angular.module('myApp.directives')
-    .directive('d3Bars', ['d3', function(d3) {
+  appDirectives.directive('d3Bars', ['d3', function(d3) {
       return {
         restrict: 'EA',
         scope: {
@@ -80,5 +76,3 @@
         }
       };
     }]);
-
-}());

@@ -1,23 +1,20 @@
-// 'use strict';
+'use strict';
 
-// var app = angular.module('app', ['appControllers', 'appServices', 'appDirectives', 'appFilters']);
-// var appControllers = angular.module('appControllers', []);
-// var appServices = angular.module('appServices', []);
-// var appDirectives = angular.module('appDirectives', []);
-// var appFilters = angular.module('appFilters', []);
-(function () {
-  'use strict';
+var app = angular.module('app', ['appControllers', 'appServices', 'appDirectives', 'appFilters']);
+var appControllers = angular.module('appControllers', []);
+var appServices = angular.module('appServices', []);
+var appDirectives = angular.module('appDirectives', []);
+var appFilters = angular.module('appFilters', []);
 
-  // create the angular app
-  angular.module('myApp', [
-    'myApp.controllers',
-    'myApp.directives'
-    ]);
+// (function () {
+//   'use strict';
 
-  // setup dependency injection
-  angular.module('d3', []);
-  angular.module('myApp.controllers', []);
-  angular.module('myApp.directives', ['d3']);
+//   // create the angular app
+//   angular.module('myApp', ['myApp.controllers','myApp.directives']);
 
-
-}());
+//   // setup dependency injection
+//   angular.module('d3', []);
+//   angular.module('socket', []);
+//   angular.module('myApp.controllers', ['socket']);
+//   angular.module('myApp.directives', ['d3']);
+// }());
