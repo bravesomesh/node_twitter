@@ -11,8 +11,8 @@ var isFirstConnectionToTwitter = true;
 var T = new Twit({
     consumer_key:         'uq8JioRp9MO3gV2HOGdiRsQET',
     consumer_secret:      'CCqwyfHDWdkcxkur6gXeScoRJh2uL4n8wSf0lDbj5d7ldM5DL4',
-    access_token:         '79397028-cF3MViGhI55FrmAKamnThr8duPAsMWvFViJsLQdUY',
-    access_token_secret:  '9Bp8j6Bra7aaa1c8x8mz8Tqh1p2UxZSBD969z05xDktVx'
+    access_token:         '79397028-7gtGOwQqGysbRftiqbjaHmAL2fEofzmykvLBgcgwr',
+    access_token_secret:  'pevQfSVOEQP8ZTi8Fn3uZKOQUirJZhhkvrqgfyzMJFWPi'
 });
 
 console.log("Listening for tweets from Mumbai...");

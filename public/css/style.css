@@ -1,0 +1,388 @@
+body{
+	background-color: black;
+	color: white;
+	text-align: center;
+
+	font-family: Akashi, Verdana, sans;
+	width: 900px;
+	margin: 0 auto 0 auto;
+}
+body a{
+	text-decoration: underline;
+	color: white;
+}
+body a:hover{
+	opacity: 0.5;
+}
+h2 {
+	color:#F6CE1D;
+	font-size: 1.2em;
+	margin:0;
+	display: inline;
+}
+h3{
+	font-family: Electrolize;
+	font-size: 1em;
+}
+
+ul{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+ 
+#wrapper{
+	width: 900px;
+	position:relative;
+} 
+
+#cover{
+	position: fixed;
+	z-index: 10;
+
+	left:0px;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	/*opacity: 0.5;*/
+}
+
+#welcome-text{
+	padding-top: 20px;
+	width: 200px;
+	position: fixed; 
+		width: 300px;
+		right:50%;
+	
+	z-index: 10;
+}
+
+/*~~~~~~~~~~~ Map Title ~~~~~~~~~~~*/
+@font-face { 
+	font-family: Akashi;
+	src: url(../fonts/Akashi.ttf); 
+} 
+
+#mapTitle{
+	width:200px;
+	height: 90px;
+	position:fixed;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	left:10px;
+	top: 5px;
+	background-color: black;
+}
+#mapTitle p{
+	font-size:0.8em;
+	padding: 5px;
+	color:white;
+	font-family: Electrolize;
+}
+
+.title{
+	color: #F6CE1D; /*bright yellow*/
+	font-size: 2.5em;
+}
+/*~~~~~~~~~~~ end Map Title ~~~~~~~~~~~*/
+
+/*------------ Map -----------*/
+#mapContainer {
+	left: 0;
+	margin: 0;
+	width: 900px;
+}
+
+.boroughs  {
+	display: inherit;
+}
+/*------------ end Map -----------*/
+
+/*-------------------Twitter "Feed"(Sample Tweets)-----------------------*/
+#keyword{
+	margin-left: 30px;
+}
+
+#bird{
+	display:inline-block;
+	height:20px;
+}
+
+#twitter-left-triangle{
+	padding-top:4px;
+	height:14px;
+	display: none;
+	padding-right:7px;
+}
+
+#twitter-down-triangle{
+	padding-top:4px;
+	height:14px;
+	display: inline-block;
+	padding-right:7px;
+}
+#twitterButton:hover{
+	cursor:pointer;
+	opacity: 0.5;
+}
+#tweetsContainer{
+		position: fixed; 
+		width: 220px;
+		left: 10px;
+		top:150px;
+	background-color: black; 
+	border-radius: 10px;
+	opacity: 0.5;
+	text-align: left;
+	color: white;
+}
+	#tweets ul{
+	list-style-type: none;
+	opacity: .75;
+	padding: 0;
+	margin:0;
+	}
+	
+	#tweets li{
+	margin: 0px 10px 10px 3px;
+	font-size: 0.9em;
+	color: #AFEEEE;
+	font-family: Electrolize;
+	padding: 10px 6px;
+	border-bottom: 1px solid #F6CE1D;
+	border-left: 3px solid #F6CE1D;
+	}
+	#tweetsContainer p {
+	font-family: Electrolize;
+	color: #AFEEEE;
+	padding-right: 6px;
+	}
+/*-------------------end Twitter "Feed"-----------------------*/
+
+/*++++++++++++++++++++ Control Panel (Map It!) ++++++++++++++++ */
+#controlPanel {
+	z-index: 100;
+	position: fixed; 
+		width: 300px;
+		height: 500px;
+		right:50%;
+		margin-right:-300px;
+		top: 20px;
+	background-color: black; 
+	border-radius: 10px;
+	/*opacity: 0.5;*/
+	color: white;
+} 
+#controlsButton{
+	padding-bottom: 10px;
+}
+#control-right-triangle{
+	padding-top:4px;
+	height:14px;
+	display: none;
+	padding-right:7px;
+}
+
+#control-down-triangle{
+	padding-top:4px;
+	height:14px;
+	display: inline-block;
+	padding-right:7px;
+}
+#controlsButton:hover{
+	cursor:pointer;
+	opacity: 0.5;
+}
+
+/*---Word Cloud--*/
+	
+	#wordcloud{
+	width: 160px;
+	
+	}
+	.words:hover{
+		opacity: 0.5;
+		cursor:pointer;
+	}
+
+	#newCloudButton{
+	
+	display: inline;
+		bottom: 35px;
+		right: 50px;
+	height: 25px;
+	background-color: #222222;
+	border-radius: 10px;
+} 
+#newCloudButton p {
+	display: inline;
+	padding: 5px;
+	color:white;
+} 
+#newCloudButton :hover {
+	opacity:0.5;
+	cursor:pointer;
+}
+	
+#submitButton{
+	
+	display: inline;
+		bottom: 35px;
+		right: 50px;
+	height: 25px;
+	background-color: #222222;
+	border-radius: 10px;
+} 
+#submitButton p {
+	display: inline;
+	padding: 5px;
+	color:white;
+} 
+#submitButton :hover {
+	opacity:0.5;
+	cursor:pointer;
+}
+
+/*++++++++++++++++++++ end Control Panel (Map It!)++++++++++++++++ */
+
+/*~~~~~~~~~~~~~~ Boroughs ~~~~~~~~~~~~~~ */
+#boroughsButton{
+opacity: 0.5;
+	position: fixed;
+		bottom: 5px;
+		left: 10px;
+	height: 25px;
+	background-color: #222222;
+	border-radius: 10px;
+} 
+
+#boroughsButton p {
+position:relative;
+	display: inline;
+	padding: 5px;
+	top: 4px;
+	color:white;
+}
+#boroughsButton :hover {
+	opacity:0.5;
+	cursor:pointer;
+}
+.boroughs {
+	z-index: 100;
+}
+		/*________ Borough Labels ________*/
+		#boroughLabels{
+			display: inherit;
+		}
+
+		#boroughLabels span{
+			position:absolute;
+			font-size:0.9em;
+		}
+		#brooklyn{
+			margin-top: 750px;
+			left: 300px;
+		}
+		#bronx {
+			margin-top:60px;
+			right:325px;
+		}
+		#manhattan{
+			margin-top:350px;
+			left:200px;
+		}
+
+		#queens{
+			margin-top: 430px;
+			right:260px;
+		}
+/*~~~~~~~~~~~~~~ end Boroughs ~~~~~~~~~~~~~~ */
+
+/*============= Legend =============*/
+#legend{
+	display: none;
+	position:fixed;
+		/*right: 320px;*/
+		right: 10px;
+		bottom: 10px;
+	height:100px;
+	width:240px;
+	background-color:black;
+	border-radius: 10px;
+}
+#legend h2{
+	position:block;
+	padding: 5px;
+	font-size: 1em;
+	clear: both;
+}
+#legendContainer{
+	position:relative;
+}
+
+#hi{
+	position: absolute;
+	padding-top:20px;
+	margin-left:50px;
+	left: 50%;
+}
+#lo{
+	position: absolute;
+	padding-top:20px;
+	margin-right:50px;
+	right: 50%;
+}
+#legendImage {
+	position: absolute;
+	width: 100px;
+	right:50%;
+	margin-right:-50px;
+}
+/*============= end Legend =============*/
+
+
+	
+/*~~~~~~~~~~~~~~~~~~~~~~~~ MAP INFO WINDOW ~~~~~~~~~~~~~~~~~~~~~~~~*/
+.infolabel {
+	position: fixed;	
+	padding: 5px;
+	z-index: 100;
+	color: #fff; /*white text*/
+	background-color:#000; /*black*/
+	border: solid thin #fff; /*white border*/
+	border-radius: 10px;
+} 
+.infolabel h2 {
+	display: inline-block;
+	line-height: 1em;
+	margin: 0;
+}
+.infolabel b {
+	float: left;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~ end MAP INFO WINDOW ~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*------------------- About Paragraph -------------------*/
+
+#aboutContainer {
+	/*display:none;*/
+	width:900px;
+	clear: both;
+	opacity:0.7;
+}
+
+#aboutContainer p{
+	float: left;
+	font-size: 0.7em;
+	color: white;
+	text-align: left;
+	font-family: Verdana, sans;
+} 
+/*------------------- end About Paragraph -------------------*/
+
+footer {
+	width:900px;
+	bottom:0;
+	clear: both;
+	opacity: 0.7;
+} 
