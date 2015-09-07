@@ -3,24 +3,129 @@
 <head>
 	<title></title>
 	<style type="text/css">
-		.right{
+		body{
+		    text-align: center;
+			font-family: Akashi, Verdana, sans;
+			margin: 0px;
+		}
+		#container1{
+			height: auto;
+			width: 100%;
+			color: white;
+			position: absolute;
+			background-image:url('images/mumbai_map.png');
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+		#analyze_button {
+			width: 32%; 
+			height: 33px; 
+			font-size:14px; 
+			font-family: Akashi, Verdana, sans;
+		}
+		.description-text{
+			text-align: left;
+		    padding-left: 15px;
+		    padding-right: 15px;
+		}
+		.right-container{
 			opacity: .5;
 			background-color: black;
 			width: 25%;
 			float: right;
 			height: auto;
+			margin-top: 7%;
+			padding: 2%;
 		}
-
+		.left-container{
+			opacity: .5;
+			background-color: black;
+			width: 25%;
+			float: left;
+			height: auto;
+			margin-top: 7%;
+			padding: 2%;
+		}
+		.search-div{
+			margin-bottom: 6%;
+		}
+		.search-term{
+			display: inline;
+		}
+		.search-term p {
+		    display: inline;
+		    padding: 5px;
+		    color: white;
+		    padding-left: 3%;
+		}
+		.search-input-div{
+			padding-top: 3%;
+		}
+		.css-input { 
+			padding-left: 3%;
+		    padding-right: 3%;
+		    padding-top: 1%;
+		    margin-top: 1%;
+		    border-radius:9px;
+		    text-align:center; 
+		    font-size:14px;
+		    border-style:solid;  
+		    border-color:#cccccc; 
+		    box-shadow: 0px 0px 0px 0px rgba(42,42,42,.75); 
+			text-shadow:0px 0px 0px rgba(42,42,42,.75); 
+			border-radius:9px; 
+			border-width:2px;
+			font-family: Akashi, Verdana, sans;
+		}
 	</style>
 </head>
-<body style="background:url('images/mumbai_map.png')">
-	<div id="container">
-		<div class="left">
+<body>
+	<div id="container1">
+		<div class="left-container">
+			<div class="description-text">
+				<p>
+					Start here by typing a word in search boxes
+				</p>
+			</div>
+			<div class="search-div">
+				<div class="search-input-div">
+					<input type="text" id="searchBox1" class="css-input" name="searchBox1">
+					<div class="search-term"><p>#Term 1</p></div>
+				</div>
+				<div class="search-input-div">
+					<input type="text" id="searchBox2" class="css-input" name="searchBox2">
+					<div class="search-term"><p>#Term 2</p></div>
+				</div>
+				<div class="search-input-div">
+					<input type="text" id="searchBox3" class="css-input" name="searchBox3">
+					<div class="search-term"><p>#Term 3</p></div>
+				</div>
+				<div class="search-input-div">
+					<input type="text" id="searchBox4" class="css-input" name="searchBox4">
+					<div class="search-term"><p>#Term 4</p></div>
+				</div>
+			</div>
+			<div class="description-text">
+				<p>
+					Enter location
+				</p>
+			</div>
+			<div class="search-div">
+				<div class="search-input-div" style="padding-top:0%;">
+					<input type="text" id="searchBox5" class="css-input" name="searchBox5">
+					<div class="search-term"><p>#Location</p></div>
+				</div>
+			</div>
+			<div id="analyze_button_div">
+				<button id="analyze_button"> Analyze </button>
+			</div>			
 		</div>		
-		<div class="right">
+		<div class="right-container">
 			<div id="wordcloud"></div>
 		</div>
 	</div>
+	<div id="container2"></div>
+	<div id="container3"></div>
 </body>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -29,7 +134,7 @@
 	function cloudMake(){ 		//called at end of setMap !
 		console.log("start cloudMake");
 		 var wordArray = [
-			"power", "water", "train", "Obama", "Romney", "work", "Sandy", "hurricane", "storm", "mayor","crane", "cold", "New York", "subway", "crazy", "vote", "evacuate"/*, "rain",  "lights", "dark", "Frankenstorm", "battery park", "climate", "batteries", "store", "supplies", "danger", "food", "subway", "MTA", "park",  "tree", "ConEd"*/];
+			"power", "water", "train", "Obama", "Romney", "work", "Sandy", "hurricane", "storm", "mayor","crane", "cold", "New York", "subway", "crazy", "vote", "evacuate"];
 		 d3.layout.cloud().size([300, 300])
 			.words(wordArray.map(function(d) {
 				return {text: d, size: 4 + Math.random() * 90};
