@@ -2,84 +2,10 @@
 <html>
 <head>
 	<title></title>
-	<style type="text/css">
-		body{
-		    text-align: center;
-			font-family: Akashi, Verdana, sans;
-			margin: 0px;
-		}
-		#container1{
-			height: auto;
-			width: 100%;
-			color: white;
-			position: absolute;
-			background-image:url('images/mumbai_map.png');
-			background-repeat: no-repeat;
-			background-size: 100% 100%;
-		}
-		#analyze_button {
-			width: 32%; 
-			height: 33px; 
-			font-size:14px; 
-			font-family: Akashi, Verdana, sans;
-		}
-		.description-text{
-			text-align: left;
-		    padding-left: 15px;
-		    padding-right: 15px;
-		}
-		.right-container{
-			opacity: .5;
-			background-color: black;
-			width: 25%;
-			float: right;
-			height: auto;
-			margin-top: 7%;
-			padding: 2%;
-		}
-		.left-container{
-			opacity: .5;
-			background-color: black;
-			width: 25%;
-			float: left;
-			height: auto;
-			margin-top: 7%;
-			padding: 2%;
-		}
-		.search-div{
-			margin-bottom: 6%;
-		}
-		.search-term{
-			display: inline;
-		}
-		.search-term p {
-		    display: inline;
-		    padding: 5px;
-		    color: white;
-		    padding-left: 3%;
-		}
-		.search-input-div{
-			padding-top: 3%;
-		}
-		.css-input { 
-			padding-left: 3%;
-		    padding-right: 3%;
-		    padding-top: 1%;
-		    margin-top: 1%;
-		    border-radius:9px;
-		    text-align:center; 
-		    font-size:14px;
-		    border-style:solid;  
-		    border-color:#cccccc; 
-		    box-shadow: 0px 0px 0px 0px rgba(42,42,42,.75); 
-			text-shadow:0px 0px 0px rgba(42,42,42,.75); 
-			border-radius:9px; 
-			border-width:2px;
-			font-family: Akashi, Verdana, sans;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body ng-app="app">
+	<!-- Search Container -->
 	<div id="container1">
 		<div class="left-container">
 			<div class="description-text">
@@ -124,67 +50,24 @@
 			<div id="wordcloud"></div>
 		</div>
 	</div>
-	<div id="container2"></div>
+	<!-- Analysis Container -->
+	<div id="container2" ng-controller="DemoCtrl">
+		
+	</div>
+	<!-- Persistance Analysis Container -->	
 	<div id="container3"></div>
+	<!-- Sentiment Analysis Container -->	
+	<div id="container4"></div>
 </body>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="angular/angular.js"></script>
+<script src="socket.io/socket.io.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services/d3.js"></script>
+<script src="js/services/service.js"></script> <!-- For Getting Socket IO service  -->
+<script src="js/controllers/demoCtrl.js"></script>
+<script src="js/controllers/demoCtrl2.js"></script>
+<script src="js/directives/d3Basic.js"></script>
 <script src="js/assets/d3.layout.cloud.js"></script>
-<script type="text/javascript">
-	function cloudMake(){ 		//called at end of setMap !
-		console.log("start cloudMake");
-		 var wordArray = [
-			"power", "water", "train", "Obama", "Romney", "work", "Sandy", "hurricane", "storm", "mayor","crane", "cold", "New York", "subway", "crazy", "vote", "evacuate"];
-		 d3.layout.cloud().size([300, 300])
-			.words(wordArray.map(function(d) {
-				return {text: d, size: 4 + Math.random() * 90};
-				}))
-			.rotate(function() { return ~~(Math.random() * 2) * 90; })
-			.font("Impact")
-			.fontSize(function(d) { return d.size; })
-			.on("end", draw)
-			.start();
-	}; 
-	function draw(words) {
-	    d3.select("#wordcloud").append("svg")
-	        .attr("width", 300)
-	        .attr("height", 300)
-	      	.append("g")
-	        .attr("transform", "translate(150,150)")
-	      	.selectAll("text")
-	        .data(words)
-	      	.enter().append("text")
-	        .style("font-size", function(d) { return d.size + "px"; })
-	        .style("font-family", "Impact")
-			.style("fill", "white")
-	       
-	        .attr("text-anchor", "middle")
-			.attr("class", "words")
-	        .attr("transform", function(d) {
-	          return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
-	        })
-	        .text(function(d) { return d.text; })
-			.on("click", function (d){
-				selectWord(d.text);
-				//recolor hexagons
-				
-			});
-	}
-	function selectWord(t) {
-		var selectedWord = t;
-		console.log("you selected:", selectedWord); 
-		
-		document.getElementById("keyword").innerHTML = selectedWord;
-		
-		//clear all words
-		d3.selectAll(".words")
-			.style("fill","white");
-		//color the selected word 
-		d3.select(t)
-			.style("fill", "#FABA0E");
-			
-		bindData(selectedWord);
-	}
-	cloudMake();
-</script>
+<script src="js/all_script.js"></script>
 </html>
