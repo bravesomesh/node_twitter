@@ -1,29 +1,74 @@
+/*
+	Author: Somesh Vyas;
+*/
 body{
     text-align: center;
 	font-family: Akashi, Verdana, sans;
 	margin: 0px;
+	height: 2000px;
 }
-#container1{
-	height: auto;
+
+#container1 {
 	width: 100%;
+	height: 30%;
 	color: white;
-	position: absolute;
-	background-image:url('images/mumbai_map.png');
+	/*position: absolute;*/
+	background-image:url('../images/mumbai_map.png');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
+
+#container2 {
+	width: 100%;
+	height: 20%;
+}
+
+#container3 {
+	width: 100%;
+	height: 20%;
+	background: #F6F8FB;
+	color: #7b858b;
+}
+
+#container4 {
+	width: 100%;
+	height: 20%;
+	color: #7b858b;
+}
+
+#container5 {
+	width: 100%;
+	height: 5%;
+	background: #000;
+}
+
 #analyze_button {
 	width: 32%; 
 	height: 33px; 
 	font-size:14px; 
 	font-family: Akashi, Verdana, sans;
 }
-.description-text{
+
+.top-padding {
+	padding-top: 6%;
+}
+
+.centered {
+	text-align: center;
+}
+
+.clearfix {
+	padding: 3%;
+}
+
+/* container 1 element's css */
+.description-text {
 	text-align: left;
     padding-left: 15px;
     padding-right: 15px;
 }
-.right-container{
+
+.right-container {
 	opacity: .5;
 	background-color: black;
 	width: 25%;
@@ -32,7 +77,8 @@ body{
 	margin-top: 7%;
 	padding: 2%;
 }
-.left-container{
+
+.left-container {
 	opacity: .5;
 	background-color: black;
 	width: 25%;
@@ -41,21 +87,26 @@ body{
 	margin-top: 7%;
 	padding: 2%;
 }
-.search-div{
+
+.search-div {
 	margin-bottom: 6%;
 }
-.search-term{
+
+.search-term {
 	display: inline;
 }
+
 .search-term p {
     display: inline;
     padding: 5px;
     color: white;
     padding-left: 3%;
 }
-.search-input-div{
+
+.search-input-div {
 	padding-top: 3%;
 }
+
 .css-input { 
 	padding-left: 3%;
     padding-right: 3%;
@@ -72,3 +123,34 @@ body{
 	border-width:2px;
 	font-family: Akashi, Verdana, sans;
 }
+
+/* Container 2 Element's css */
+.left-div {
+	width: 60%;
+	height: auto;
+	padding: 3%;
+}
+
+.middle-div {
+	width: 10%;
+}
+
+.right-div {
+	width: 30%;
+}
+
+/* Container 3 Element's css */
+/*.coming-soon {
+	width: 60%;
+	float: left;
+}
+
+.sentiment_analysis_div {
+	float: left;
+	width: 60%;
+	height: 100%;
+	padding: 2%;
+	background-image:url('../images/Sentiment-Analysis.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}*/

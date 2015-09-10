@@ -52,14 +52,32 @@
 	</div>
 	<!-- Analysis Container -->
 	<div id="container2" ng-controller="DemoCtrl">
-		
+		<div class="left-div">
+			<d3-bars data="d3Data" label="name" on-click="d3OnClick(item)"></d3-bars>
+		</div>
+		<div class="middle-div">
+			
+		</div>
+		<div class="right-div">
+			
+		</div>
 	</div>
 	<!-- Persistance Analysis Container -->	
-	<div id="container3"></div>
+	<div id="container3">
+		<h2 class="centered top-padding">Sentiment Analysis</h2>
+		<h1 class="centered">Coming Soon</h1>
+	</div>
 	<!-- Sentiment Analysis Container -->	
-	<div id="container4"></div>
+	<div id="container4">
+		<h2 class="centered top-padding">Persistent Analysis</h2>
+		<h1 class="centered">Coming Soon</h1>
+	</div>
+	<div id="container5">
+		
+	</div>
 </body>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="angular/angular.js"></script>
 <script src="socket.io/socket.io.js"></script>
 <script src="js/app.js"></script>
