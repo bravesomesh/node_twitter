@@ -16,7 +16,7 @@ var T = new Twit({
 });
 
 console.log("Listening for tweets from Mumbai...");
-var stream = T.stream('statuses/filter', { locations: [72.775909,18.892868,72.986499,19.271634] });
+var stream = T.stream('statuses/filter',{ track: 'rain, pizza, water, contest' }, { locations: [72.775909,18.892868,72.986499,19.271634] });
 var tweetsBuffer = [];
 var oldTweetsBuffer = [];
 
